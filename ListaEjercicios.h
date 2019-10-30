@@ -2,8 +2,8 @@
 
 class ListaEjercicios {
 private:
-	Nodo* primero;
-	Nodo* actual;
+	NodoEjercicio* primero;
+	NodoEjercicio* actual;
 public:
 	ListaEjercicios(void);
 	~ListaEjercicios(void);

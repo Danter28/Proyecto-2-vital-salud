@@ -1,4 +1,4 @@
-#include "Nodos.h"
+#include "NodoEjercicio.h"
 
 NodoEjercicio::NodoEjercicio(Ejercicio*) {
 	ejercicio = new Ejercicio(); //se pueden setear los parametros desde aqui

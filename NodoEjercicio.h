@@ -1,7 +1,7 @@
-#include "Ejercicio.h"
-#include "Persona.h"
 #ifndef _NODOEJERCICIO_
 #define _NODOEJERCICIO_
+#include "Ejercicio.h"
+#include "Persona.h"
 class NodoEjercicio {
 private:
 	Ejercicio* ejercicio;
