@@ -45,9 +45,6 @@
     <ClInclude Include="Clase.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="Menu.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
     <ClInclude Include="Listas.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>

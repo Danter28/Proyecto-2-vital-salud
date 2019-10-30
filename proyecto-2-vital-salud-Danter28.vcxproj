@@ -131,7 +131,6 @@
     <ClInclude Include="Librerias.h" />
     <ClInclude Include="ListaPersona.h" />
     <ClInclude Include="Listas.h" />
-    <ClInclude Include="Menu.h" />
     <ClInclude Include="NodoPersona.h" />
     <ClInclude Include="Nodos.h" />
     <ClInclude Include="Persona.h" />

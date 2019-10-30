@@ -1,21 +1,4 @@
-#include "Nodos.h"
-
-
-#ifndef _LISTA_
-#define _LISTA_
-class Lista_Objeto {
-private:
-	Nodo* primero;
-	Nodo* actual;
-public:
-	Lista(void);
-	~Lista(void);
-	bool listaVacia();
-	string toString();
-	Objeto* encuentraObjeto(/*parametro de busqueda*/);
-	string buscarObjeto(/*parametro de busqueda*/);
-
-};#endif
+#include "NodoEjercicio.h"
 
 class ListaEjercicios {
 private:
