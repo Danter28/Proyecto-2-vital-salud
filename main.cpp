@@ -1,6 +1,7 @@
 #include "Persona.h"
 #include"Socio.h"
-#include "Nodos.h"
+#include "NodoPersona.h"
+#include "NodoEjercicio.h"
 int main() {
 	Rutina* r1= new Rutina("perder peso",10);
 	Ejercicio* e1 = new Ejercicio("pressP", "pierna", 2, 12);

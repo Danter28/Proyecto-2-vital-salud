@@ -28,13 +28,13 @@ void ListaEjercicios::insertarEjercicio(Ejercicio* ejer) {  //En este metodo se 
 	actual = primero;
 	if (primero == NULL) //Si la lista está vacia,  se crea un nuevo nodo para iniciar la lista, insertando el objeto que entra por parametro.
 
-		primero = new NodoEjercicio();
+		primero = new NodoEjercicio(ejer);
 
 	else { //Caso contrario se inserta el elemento
 		while (actual->getSig()) {
 			actual = actual->getSig();
 		}
-		actual = new NodoEjercicio(ejer, actual->getSig());
+		actual = new NodoEjercicio(ejer);
 	}
 }
 void ListaEjercicios::eliminaEjercicio(Ejercicio* n) {//Busca y elimina un nodo determinado de la lista
@@ -50,7 +50,7 @@ void ListaEjercicios::eliminaEjercicio(Ejercicio* n) {//Busca y elimina un nodo 
 		if (!anterior)//si es el primer elemento
 			primero = actual->getSig();
 		else//si es un elemento intermedio o el ultimo
-			anterior->setSigNodo(actual->getSig());
+			anterior->setSig(actual->getSig());
 		delete actual;
 	}
 }
@@ -100,15 +100,4 @@ void ListaEjercicios::ActualizaEjercicio(Ejercicio* nuevo) { //Actualiza la info
 		}
 		actual = actual->getSig();
 	}
-}
-
-ListaEjercicios::~ListaEjercicios() { // Destructor de la clase 
-	actual = primero;
-	while (primero) {
-		actual = primero;
-		primero = primero->getSig();
-		delete actual;
-	}
-	actual = NULL;
-	primero = NULL;
 }

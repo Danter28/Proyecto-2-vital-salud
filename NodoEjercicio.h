@@ -9,7 +9,7 @@ private:
 public:
 	NodoEjercicio(Ejercicio*);
 	void setEjercicio(Ejercicio*);
-	NodoEjercicio* getEjercicio();
+	Ejercicio* getEjercicio();
 	void setSig(NodoEjercicio*);
 	NodoEjercicio* getSig();
 	~NodoEjercicio();

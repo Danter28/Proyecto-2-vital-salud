@@ -123,36 +123,30 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Clase.h" />
     <ClInclude Include="Ejercicio.h" />
-    <ClInclude Include="Expediente.h" />
     <ClInclude Include="Instructor.h" />
     <ClInclude Include="Interfaz.h" />
     <ClInclude Include="Librerias.h" />
+    <ClInclude Include="ListaEjercicios.h" />
     <ClInclude Include="ListaPersona.h" />
-    <ClInclude Include="Listas.h" />
+    <ClInclude Include="NodoEjercicio.h" />
     <ClInclude Include="NodoPersona.h" />
-    <ClInclude Include="Nodos.h" />
     <ClInclude Include="Persona.h" />
     <ClInclude Include="Rutina.h" />
     <ClInclude Include="Salon.h" />
     <ClInclude Include="Socio.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Clase.cpp" />
     <ClCompile Include="Ejercicio.cpp" />
-    <ClCompile Include="Expediente.cpp" />
     <ClCompile Include="Instructor.cpp" />
     <ClCompile Include="Interfaz.cpp" />
+    <ClCompile Include="ListaEjercicios.cpp" />
     <ClCompile Include="ListaPersona.cpp" />
-    <ClCompile Include="Listas.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Menu.cpp" />
+    <ClCompile Include="NodoEjercicio.cpp" />
     <ClCompile Include="NodoPersona.cpp" />
-    <ClCompile Include="Nodos.cpp" />
     <ClCompile Include="Persona.cpp" />
     <ClCompile Include="Rutina.cpp" />
-    <ClCompile Include="Salon.cpp" />
     <ClCompile Include="Socio.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -1,3 +1,5 @@
+#ifndef _LISTAEJERCICIOS_
+#define _LISTAEJERCICIOS_
 #include "NodoEjercicio.h"
 
 class ListaEjercicios {
@@ -6,7 +8,7 @@ private:
 	NodoEjercicio* actual;
 public:
 	ListaEjercicios(void);
-	~ListaEjercicios(void);
+	~ListaEjercicios();
 	bool listaVacia();
 	string toString();
 	void insertarEjercicio(Ejercicio*);

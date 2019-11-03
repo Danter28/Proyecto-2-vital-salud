@@ -10,11 +10,11 @@ ListaPersona::~ListaPersona() {
 		primero = primero->getSig();
 		delete actual;
 	}
-	actual = NULL;
-	primero = NULL;
+	actual = nullptr;
+	primero = nullptr;
 }
 bool ListaPersona::listaVacia() {
-	if (primero == NULL)
+	if (primero == nullptr)
 		return true;
 	else
 		return false;
@@ -23,7 +23,7 @@ string ListaPersona::toString() {
 	string s1;
 	actual = primero;
 
-	while (actual != NULL) {
+	while (actual != nullptr) {
 		s1 += actual->NodoPersona::getPersona()->toString() + "\n";
 		actual = actual->getSig();
 	}
@@ -31,7 +31,7 @@ string ListaPersona::toString() {
 }
 void ListaPersona::insertaPersona(Persona*) {}
 void ListaPersona::eliminaPersona(Persona* n) {
-	NodoPersona* anterior = NULL;
+	NodoPersona* anterior = nullptr;
 	actual = primero;
 	while (actual && actual->getPersona()->getNombreCompleto() != n->getNombreCompleto()) { //cambia segun los parametros de busqueda
 		anterior = actual; //Se usa una auxiliar anterior para guardar el campo del nodo anterior al que se va a borrar
@@ -43,15 +43,15 @@ void ListaPersona::eliminaPersona(Persona* n) {
 		if (!anterior)//si es el primer elemento
 			primero = actual->getSig();
 		else//si es un elemento intermedio o el ultimo
-			anterior->setSigNodo(actual->getSig());
+			anterior->setSig(actual->getSig());
 		delete actual;
 	}
 }
 void ListaPersona::ActualizaPersona(Persona* nuevo) {
 	actual = primero;
-	while (actual != NULL) {
+	while (actual != nullptr) {
 		if (actual->getPersona()->getNombreCompleto() == nuevo->getNombreCompleto()) {
-			actual->setEjercicio(nuevo);
+			actual->setPersona(nuevo);
 			break;
 		}
 		actual = actual->getSig();
@@ -59,25 +59,28 @@ void ListaPersona::ActualizaPersona(Persona* nuevo) {
 }
 Persona* ListaPersona::encuentraPersona(string nom) {
 	actual = primero;
-	while (actual != NULL) {
+	while (actual != nullptr) {
 		if (actual->getPersona()->getNombreCompleto() == nom) {
 			return actual->getPersona();
 			break;
 		}
 		actual = actual->getSig();
-		if (actual == NULL)
-			return NULL;
+		if (actual == nullptr)
+			return nullptr;
 	}
 }
 string ListaPersona::buscarPersona(string nom) {
 	actual = primero;
-	while (actual != NULL) {
+	while (actual != nullptr) {
 		if (actual->getPersona()->getNombreCompleto() == nom) {
 			return actual->getPersona()->toString();
 			break;
 		}
-		actual = actual->getSig();
-		if (actual == NULL)
-			return NULL;
+		
+		else {
+			actual = actual->getSig(); 
+			if (actual == nullptr)
+				return nullptr;
+		}
 	}
 }
