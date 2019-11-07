@@ -133,7 +133,6 @@
     <ClInclude Include="NodoPersona.h" />
     <ClInclude Include="Persona.h" />
     <ClInclude Include="Rutina.h" />
-    <ClInclude Include="Salon.h" />
     <ClInclude Include="Socio.h" />
   </ItemGroup>
   <ItemGroup>

@@ -1,15 +1,17 @@
 #ifndef _SOCIO_
 #define _SOCIO_
-#include"Rutina.h"
+#include"ListaEjercicios.h"
+#include "Instructor.h"
 #include"Persona.h"
 class Rutina;
 class Socio :public Persona {
 private:
+	Instructor* instructor;
 	float peso;
 	float masaMuscular;
 	float grasaCorporal;
 	bool tipoRutina;
-	Rutina* rutina;
+	ListaEjercicios* rutina;
 public:
 	Socio();
 	Socio(string, string, string, string );
@@ -27,12 +29,14 @@ public:
 	float getMasaMuscular();
 	float getGrasaCorporal();
 	bool getTipoRutina();
-	Rutina* getRutina();
+	ListaEjercicios* getRutina();
 	void setPeso(float);
 	void setMasaMuscular(float);
 	void setGrasaCorporal(float);
 	void setTipoRutina(int);
-	void setRutina(Rutina*);
+	void setRutina(ListaEjercicios*);
+	void setInstructor(Instructor*);
+	string toString();
 
 };
 #endif // !_SOCIO_

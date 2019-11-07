@@ -1,12 +1,12 @@
 #include "ListaEjercicios.h"
 ListaEjercicios::ListaEjercicios() {
-	primero = NULL;
-	actual = NULL;
+	primero = nullptr;
+	actual = nullptr;
 }
 
 
 bool ListaEjercicios::listaVacia() { //retorna si la lista está vacía
-	if (primero == NULL)
+	if (primero == nullptr)
 		return true;
 	else
 		return false;
@@ -19,26 +19,26 @@ ListaEjercicios::~ListaEjercicios() {
 		primero = primero->getSig();
 		delete actual;
 	}
-	actual = NULL;
-	primero = NULL;
+	actual = nullptr;
+	primero = nullptr;
 }
 
 void ListaEjercicios::insertarEjercicio(Ejercicio* ejer) {  //En este metodo se inserta el Objeto n en un nodo para posteriormente insertarlo en la lista, guardandolos.
 
 	actual = primero;
-	if (primero == NULL) //Si la lista está vacia,  se crea un nuevo nodo para iniciar la lista, insertando el objeto que entra por parametro.
+	if (primero == nullptr) //Si la lista está vacia,  se crea un nuevo nodo para iniciar la lista, insertando el objeto que entra por parametro.
 
-		primero = new NodoEjercicio(ejer);
+		primero = new NodoEjercicio(ejer,nullptr);
 
 	else { //Caso contrario se inserta el elemento
 		while (actual->getSig()) {
 			actual = actual->getSig();
 		}
-		actual = new NodoEjercicio(ejer);
+		actual = new NodoEjercicio(ejer,nullptr);
 	}
 }
 void ListaEjercicios::eliminaEjercicio(Ejercicio* n) {//Busca y elimina un nodo determinado de la lista
-	NodoEjercicio* anterior = NULL;
+	NodoEjercicio* anterior = nullptr;
 	actual = primero;
 	while (actual && actual->getEjercicio()->getNombreE() != n->getNombreE()) { //cambia segun los parametros de busqueda
 		anterior = actual; //Se usa una auxiliar anterior para guardar el campo del nodo anterior al que se va a borrar
@@ -58,7 +58,7 @@ string ListaEjercicios::toString() { // toString de la clase, obtiene todos nodo
 	string s1;
 	actual = primero;
 
-	while (actual != NULL) {
+	while (actual != nullptr) {
 		s1 += actual->getEjercicio()->resumen() + "\n";
 		actual = actual->getSig();
 	}
@@ -67,33 +67,33 @@ string ListaEjercicios::toString() { // toString de la clase, obtiene todos nodo
 
 Ejercicio* ListaEjercicios::encuentraEjercicio(string nom) { //Busca un objeto y lo devuelve a partir de un nombre que digite el usuario, cambia segun el contenido del nodo
 	actual = primero;
-	while (actual != NULL) {
+	while (actual != nullptr) {
 		if (actual->getEjercicio()->getNombreE() == nom) {
 			return actual->getEjercicio();
 			break;
 		}
 		actual = actual->getSig();
-		if (actual == NULL)
-			return NULL;
+		if (actual == nullptr)
+			return nullptr;
 	}
 }
 
 string ListaEjercicios::buscarEjercicio(string nom) {//Busca un objeto y retorna la informacion de este, cambia segun el contenido del nodo
 	actual = primero;
-	while (actual != NULL) {
+	while (actual != nullptr) {
 		if (actual->getEjercicio()->getNombreE() == nom) {
 			return actual->getEjercicio()->resumen();
 			break;
 		}
 		actual = actual->getSig();
-		if (actual == NULL)
-			return NULL;
+		if (actual == nullptr)
+			return nullptr;
 	}
 }
 
 void ListaEjercicios::ActualizaEjercicio(Ejercicio* nuevo) { //Actualiza la informacion de un objeto que se encuentre en esta clase, cambia segunel contenido del nodo
 	actual = primero;
-	while (actual != NULL) {
+	while (actual != nullptr) {
 		if (actual->getEjercicio()->getNombreE() == nuevo->getNombreE()) {
 			actual->setEjercicio(nuevo);
 			break;

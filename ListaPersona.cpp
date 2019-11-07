@@ -1,7 +1,7 @@
 #include "ListaPersona.h"
 ListaPersona::ListaPersona() {
-	this->primero = nullptr;
-	this->actual = nullptr;
+	primero = nullptr;
+	actual = nullptr;
 }
 ListaPersona::~ListaPersona() {
 	actual = primero;
@@ -23,21 +23,34 @@ string ListaPersona::toString() {
 	string s1;
 	actual = primero;
 
-	while (actual != nullptr) {
-		s1 += actual->NodoPersona::getPersona()->toString() + "\n";
+	while (actual!= nullptr) {
+		s1 += actual->getPersona()->toString() + "\n";
 		actual = actual->getSig();
 	}
 	return s1;
 }
-void ListaPersona::insertaPersona(Persona*) {}
+void ListaPersona::insertaPersona(Persona* x) {
+	actual = primero;
+	if (primero == nullptr) { //Si la lista está vacia,  se crea un nuevo nodo para iniciar la lista, insertando el objeto que entra por parametro.
+		primero = new NodoPersona(x,primero);
+	}
+
+	else { //Caso contrario se inserta el elemento
+		while (actual->getSig()!=nullptr) {
+			actual = actual->getSig();
+		}
+
+		actual->setSig(new NodoPersona(x,actual->getSig()));
+	}
+} 
 void ListaPersona::eliminaPersona(Persona* n) {
 	NodoPersona* anterior = nullptr;
 	actual = primero;
-	while (actual && actual->getPersona()->getNombreCompleto() != n->getNombreCompleto()) { //cambia segun los parametros de busqueda
+	while (actual) { //cambia segun los parametros de busqueda
 		anterior = actual; //Se usa una auxiliar anterior para guardar el campo del nodo anterior al que se va a borrar
 		actual = actual->getSig(); //Avanza por la lista hasta encontrar el objeto a borrar.
 	}
-	if (!actual || actual->getPersona()->getNombreCompleto() != n->getNombreCompleto())//Si no lo encontro, cambia segun los parametros de busqueda
+	if (!actual)//Si no lo encontro, cambia segun los parametros de busqueda
 		return; //
 	else {//Borra el nodo
 		if (!anterior)//si es el primer elemento

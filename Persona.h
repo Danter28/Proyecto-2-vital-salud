@@ -22,7 +22,7 @@ public:
 	void setNombreCompleto(string);
 	void setEmail(string);
 	void setTelefono(string) ;
-	string toString();
+	virtual string toString();
 
 
 };

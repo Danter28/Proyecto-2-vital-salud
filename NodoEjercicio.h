@@ -7,7 +7,7 @@ private:
 	Ejercicio* ejercicio;
 	NodoEjercicio* siguiente;
 public:
-	NodoEjercicio(Ejercicio*);
+	NodoEjercicio(Ejercicio*,NodoEjercicio*);
 	void setEjercicio(Ejercicio*);
 	Ejercicio* getEjercicio();
 	void setSig(NodoEjercicio*);

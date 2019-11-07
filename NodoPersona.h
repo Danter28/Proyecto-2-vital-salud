@@ -7,7 +7,7 @@ private:
 	Persona* persona;
 	NodoPersona* siguiente;
 public:
-	NodoPersona();
+	NodoPersona(Persona* v,NodoPersona*);
 	void setPersona(Persona*);
 	Persona* getPersona();
 	void setSig(NodoPersona*);

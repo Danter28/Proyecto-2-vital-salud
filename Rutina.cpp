@@ -50,7 +50,7 @@ void Rutina::eliminarEjercicio(Ejercicio* ejercicio){
 
 string Rutina::reporteRutina(){
 	string reporteR="\nLista de ejercicios:\n";
-	for (int recorrer = 0; recorrer < cantidad; recorrer++) {
+	for (int recorrer = 0; recorrer <= cantidad; recorrer++) {
 		reporteR += ejercicios[recorrer]->resumen()+"\n";
 	}
 	return reporteR;

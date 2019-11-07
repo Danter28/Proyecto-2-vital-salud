@@ -1,7 +1,7 @@
 #include "NodoPersona.h"
-NodoPersona::NodoPersona() {
-	persona = new Persona(); //se pueden setear los parametros desde aqui
-	siguiente = NULL;
+NodoPersona::NodoPersona(Persona* v, NodoPersona* sig=nullptr) {
+	persona = v; //se pueden setear los parametros desde aqui
+	siguiente = sig;
 }
 
 void NodoPersona::setPersona(Persona* per) {

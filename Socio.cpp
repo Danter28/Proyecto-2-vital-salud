@@ -20,7 +20,7 @@ string Socio::getEmail() { return Persona::getEmail(); }
 string Socio::getTelefono() { return Persona::getTelefono(); }
 string Socio::verInformacion() {
 	string reporte = "cedula: " + getCedula() + "\nNombreCompleto: " + getNombreCompleto() + "\nEmail: " + getEmail() + "\nTelefono: " + getTelefono() +
-		"\nRutina: " + rutina->reporteRutina();
+		"\nRutina: " + rutina->toString();
 
 
 
@@ -37,9 +37,20 @@ float Socio::getPeso() { return peso; }
 float Socio::getMasaMuscular() { return masaMuscular; }
 float Socio::getGrasaCorporal() { return grasaCorporal; }
 bool Socio::getTipoRutina() { return tipoRutina; }
-Rutina* Socio::getRutina() { return rutina; }
+ListaEjercicios* Socio::getRutina() { return rutina; }
 void Socio::setPeso(float peso) { this->peso = peso; }
 void Socio::setMasaMuscular(float masaM) { masaMuscular = masaM; }
 void Socio::setGrasaCorporal(float grasaC) { grasaCorporal = grasaC; }
 void Socio::setTipoRutina(int tipo) { tipoRutina = (tipo == 1)?true:false; }
-void Socio::setRutina(Rutina* rutina) { this->rutina = rutina; }
+void Socio::setRutina(ListaEjercicios* rutina) { this->rutina = rutina; }
+void Socio::setInstructor(Instructor* ins) { instructor = ins; }
+string Socio::toString() {
+	string resumen=Persona::toString();
+	resumen += "\nPeso: " + std::to_string(getPeso()) +
+		"\nMasa Muscular: " + std::to_string(getMasaMuscular()) +
+		"\nGrasa Corporal:" + std::to_string(getMasaMuscular()) +
+		"\nRutina: \n" + getRutina()->toString() + "\n\n";
+	return resumen;
+
+
+}

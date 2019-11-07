@@ -1,8 +1,8 @@
 #include "NodoEjercicio.h"
 
-NodoEjercicio::NodoEjercicio(Ejercicio*) {
-	ejercicio = new Ejercicio(); //se pueden setear los parametros desde aqui
-	siguiente = NULL;
+NodoEjercicio::NodoEjercicio(Ejercicio* e,NodoEjercicio* sig=nullptr) {
+	ejercicio = e; //se pueden setear los parametros desde aqui
+	siguiente = sig;
 }
 
 void NodoEjercicio::setEjercicio(Ejercicio* ejer) {

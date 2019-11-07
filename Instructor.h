@@ -2,7 +2,7 @@
 #define _INSTRUCTOR_
 #include "Persona.h"
 
-class Instructor:Persona{
+class Instructor:public Persona{
 private:
 
 public:

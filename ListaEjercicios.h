@@ -7,13 +7,13 @@ private:
 	NodoEjercicio* primero;
 	NodoEjercicio* actual;
 public:
-	ListaEjercicios(void);
+	ListaEjercicios();
 	~ListaEjercicios();
 	bool listaVacia();
 	string toString();
-	void insertarEjercicio(Ejercicio*);
-	void eliminaEjercicio(Ejercicio*);
-	void ActualizaEjercicio(Ejercicio*);
+	void insertarEjercicio(Ejercicio* );
+	void eliminaEjercicio(Ejercicio* );
+	void ActualizaEjercicio(Ejercicio* );
 	Ejercicio* encuentraEjercicio(string);
 	string buscarEjercicio(string);
 
