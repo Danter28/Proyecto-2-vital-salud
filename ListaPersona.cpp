@@ -97,3 +97,13 @@ string ListaPersona::buscarPersona(string nom) {
 		}
 	}
 }
+string ListaPersona::getNombres() {
+	string s1;
+	actual = primero;
+
+	while (actual != nullptr) {
+		s1 += actual->getPersona()->getNombreCompleto() + "\n";
+		actual = actual->getSig();
+	}
+	return s1;
+}

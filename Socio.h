@@ -14,7 +14,7 @@ private:
 	ListaEjercicios* rutina;
 public:
 	Socio();
-	Socio(string, string, string, string );
+	Socio(string, string, string, string,float,float,float,bool );
 	~Socio();
 	string getCedula();
 	string getNombreCompleto();
@@ -29,6 +29,7 @@ public:
 	float getMasaMuscular();
 	float getGrasaCorporal();
 	bool getTipoRutina();
+	Instructor* getInstructor();
 	ListaEjercicios* getRutina();
 	void setPeso(float);
 	void setMasaMuscular(float);

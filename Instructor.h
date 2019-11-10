@@ -1,14 +1,16 @@
 #ifndef _INSTRUCTOR_
 #define _INSTRUCTOR_
-#include "Persona.h"
+#include "ListaPersona.h"
+
 
 class Instructor:public Persona{
 private:
-
+	ListaPersona* sociosAsignados= new ListaPersona();
 public:
 	Instructor();
 	Instructor(string,string,string,string);
 	~Instructor();
+	ListaPersona* getSociosAsignados();
 	string getCedula();
 	string getNombreCompleto();
 	string getEmail();
@@ -17,6 +19,7 @@ public:
 	void setNombreCompleto(string);
 	void setEmail(string);
 	void setTelefono(string);
+	string toString();
 	
 
 

@@ -14,6 +14,7 @@ class ListaPersona{
 		void ActualizaPersona(Persona*);
 		Persona* encuentraPersona(string);
 		string buscarPersona(string);
+		string getNombres();
 
 	
 

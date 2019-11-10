@@ -13,5 +13,6 @@ void Persona::setEmail(string email) { this->email = email; }
 void Persona::setTelefono(string tel) { telefono = tel; }
 string Persona::toString() {
 	string reporte;
+	reporte = "Nombre Completo: " + getNombreCompleto() + "\ncedula: " + getCedula() + "\nemail: " + getEmail() + "\nTelefono: " + getTelefono();
 	return reporte;
 }

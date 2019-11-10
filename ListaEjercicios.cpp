@@ -26,15 +26,16 @@ ListaEjercicios::~ListaEjercicios() {
 void ListaEjercicios::insertarEjercicio(Ejercicio* ejer) {  //En este metodo se inserta el Objeto n en un nodo para posteriormente insertarlo en la lista, guardandolos.
 
 	actual = primero;
-	if (primero == nullptr) //Si la lista está vacia,  se crea un nuevo nodo para iniciar la lista, insertando el objeto que entra por parametro.
+	if (primero == nullptr) { //Si la lista está vacia,  se crea un nuevo nodo para iniciar la lista, insertando el objeto que entra por parametro.
 
-		primero = new NodoEjercicio(ejer,nullptr);
+		primero = new NodoEjercicio(ejer, primero);
+	}
 
 	else { //Caso contrario se inserta el elemento
 		while (actual->getSig()) {
 			actual = actual->getSig();
 		}
-		actual = new NodoEjercicio(ejer,nullptr);
+		actual ->setSig( new NodoEjercicio(ejer,actual->getSig()));
 	}
 }
 void ListaEjercicios::eliminaEjercicio(Ejercicio* n) {//Busca y elimina un nodo determinado de la lista

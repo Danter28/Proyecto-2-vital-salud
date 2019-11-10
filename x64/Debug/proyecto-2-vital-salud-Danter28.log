@@ -1,8 +1,0 @@
-﻿  Socio.cpp
-C:\Users\dante\source\repos\Danter28\Proyecto-2-vital-salud\Socio.cpp(4,21): warning C4305: '=': truncation from 'double' to 'float'
-C:\Users\dante\source\repos\Danter28\Proyecto-2-vital-salud\Socio.cpp(5,22): warning C4305: '=': truncation from 'double' to 'float'
-C:\Users\dante\source\repos\Danter28\Proyecto-2-vital-salud\Socio.cpp(11,21): warning C4305: '=': truncation from 'double' to 'float'
-  main.cpp
-  Generating Code...
-C:\Users\dante\source\repos\Danter28\Proyecto-2-vital-salud\Socio.cpp(12,22): warning C4305: '=': truncation from 'double' to 'float'
-  proyecto-2-vital-salud-Danter28.vcxproj -> C:\Users\dante\source\repos\Danter28\Proyecto-2-vital-salud\x64\Debug\proyecto-2-vital-salud-Danter28.exe
